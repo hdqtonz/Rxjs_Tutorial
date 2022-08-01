@@ -1,0 +1,75 @@
+<div class="my-3">
+  <h2>Custom Observalbe</h2>
+  <br />
+
+  <div class="row">
+    <!-- Ex: 01 -->
+    <div class="col-md-6">
+      <strong>Ex - 01 (Manual)</strong>
+      <hr />
+      <ul
+        [ngClass]="
+          tachStatus == 'complete'
+            ? 'complete'
+            : tachStatus == 'error'
+            ? 'error'
+            : ''
+        "
+        class="tech_list"
+        id="elContainer"
+      ></ul>
+    </div>
+    <!-- Ex: 02 -->
+    <div class="col-md-6">
+      <strong>Ex - 02 (Custom Interval Observalbe)</strong>
+      <hr />
+      <ul
+        [ngClass]="
+          tachStatus2 == 'complete'
+            ? 'complete'
+            : tachStatus2 == 'error'
+            ? 'error'
+            : ''
+        "
+        id="elContainer3"
+        class="tech_list"
+      ></ul>
+    </div>
+  </div>
+
+  <br />
+  <!-- Ex: 03 -->
+  <div class="row">
+    <div class="col-md-12">
+      <br />
+      <strong>Ex - 03 (Random Names)</strong>
+      <br />
+      <br />
+      <p class="bg-light py-3 px-3 border rounded">
+        <strong>Random Names : </strong
+        >'Hiten','Kashyap','Brijesh','Parth',Vibha,Yogita,Rakshit
+      </p>
+      <hr />
+      <p>
+        Current Name : <strong>{{ names }}</strong>
+      </p>
+      <span
+        [ngClass]="
+          nameStatus == 'complete'
+            ? 'bg-success'
+            : nameStatus == 'error'
+            ? 'bg-danger'
+            : 'bg-primary'
+        "
+        class="badge"
+        >{{
+          nameStatus == "complete"
+            ? "Success"
+            : nameStatus == "error"
+            ? "Error"
+            : "Running"
+        }}</span
+      >
+    </div>
+  </div>
+</div>
