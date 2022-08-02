@@ -1,0 +1,82 @@
+<div class="my-3">
+  <h2>Filter</h2>
+  <br />
+
+  <div class="row">
+    <!-- Ex - 01 -->
+    <div class="col-md-4">
+      <strong>EX - 01</strong>
+      <hr />
+
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Filter : </strong> By length
+      </p>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let itme of data">
+            <td>{{ itme.id }}</td>
+            <td>{{ itme.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Ex - 02 -->
+    <div class="col-md-4">
+      <strong>EX - 02</strong>
+      <hr />
+
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Filter : </strong> By Gender
+      </p>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of dataTwo">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.gender }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Ex - 03 -->
+    <div class="col-md-4">
+      <strong>EX - 03</strong>
+      <hr />
+
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Filter : </strong> By Nth Item
+      </p>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of dataThree">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
